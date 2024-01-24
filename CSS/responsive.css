@@ -1,0 +1,347 @@
+/* ? rem and em donot depend on html font-size in media queries! 
+* instead 1 rem = 1 em = 16px */
+
+/* 
+
+* BREAKPONTS: 
+
+* lAPTOP: 1360 PX = 85 EM
+* TABLET: 1200 PX / 944 PX = 75 EM / 59 EM  
+* SMALLER TABLET: 720PX
+* PHONE: 550 PX
+
+*/
+
+/* *******************? */
+/* * RESPONSIVE DESIGN */
+/* *******************? */
+
+@media (max-width: 1360px) {
+	.hero-main {
+		max-width: 120rem;
+	}
+
+	.heading-primary {
+		font-size: 4.4rem;
+	}
+
+	.testimonial-gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 1200px) {
+	html {
+		/* * 9px / 16px */
+		font-size: 56.25%;
+	}
+
+	.grid {
+		gap: 6.4rem 4.8rem;
+	}
+
+	.heading-common {
+		font-size: 3.6rem;
+	}
+
+	.heading-secondary {
+		font-size: 2.4rem;
+	}
+
+	.header {
+		padding: 0 3.2rem;
+	}
+
+	.hero-main {
+		row-gap: 4.8rem;
+	}
+
+	.nav-bar {
+		gap: 3.2rem;
+	}
+
+	.testimonial-content {
+		padding: 9.6rem 3.2rem;
+	}
+}
+
+@media (max-width: 944px) {
+	html {
+		/* * 8 px / 16px */
+		font-size: 50%;
+	}
+
+	.hero-main {
+		grid-template-columns: 1fr;
+		padding: 0 9.6rem;
+		row-gap: 6.4rem;
+	}
+
+	.hero-content--images img {
+		width: 60%;
+	}
+
+	.hero-customers {
+		justify-content: center;
+		margin-top: 3.2rem;
+	}
+
+	.hero-content--details,
+	.hero-content--images {
+		text-align: center;
+	}
+
+	.feature-logos img {
+		width: 9%;
+	}
+
+	.feature-logos img:nth-child(3) {
+		width: 18%;
+	}
+
+	.meal-description {
+		padding: 2.4rem 3.2rem 3.2rem;
+	}
+
+	.testimonial-section {
+		grid-template-columns: 1fr;
+	}
+
+	.testimonial-gallery {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.cta-grid {
+		grid-template-columns: 60fr 40fr;
+	}
+
+	.cta-form {
+		grid-template-columns: 1fr;
+	}
+
+	.cta-form button {
+		margin-top: 1.2rem;
+	}
+
+	.mobile-nav-button {
+		display: block;
+	}
+
+	.nav-bar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(255, 255, 255, 0.63);
+		backdrop-filter: blur(10px);
+		gap: 4.8rem;
+		transition: all 0.5s ease-out;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+		transform: translateX(100%);
+	}
+
+	.nav-link:link,
+	.nav-link:visited {
+		font-size: 3rem;
+	}
+
+	.pricing-plan {
+		width: 85%;
+	}
+
+	.nav-open .nav-bar {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+		transform: translateX(0);
+	}
+
+	.nav-open .mobile-nav-button ion-icon[name="close-outline"] {
+		display: block;
+	}
+
+	.nav-open .mobile-nav-button ion-icon[name="menu-outline"] {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.grid-four,
+	.grid-three {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.meal-choice {
+		grid-column: span 2;
+		justify-self: center;
+	}
+
+	.heading-common {
+		margin-bottom: 4.8rem;
+	}
+
+	.pricing-plan {
+		width: 100%;
+	}
+
+	.grid-five {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.footer-account,
+	.footer-company,
+	.footer-resources {
+		grid-row: 1;
+		grid-column: auto / span 2;
+	}
+
+	.logo-section,
+	.footer-contact {
+		grid-column: auto / span 3;
+	}
+
+	.copyright {
+		margin-top: 4.8rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.grid-two,
+	.grid-three,
+	.grid-four {
+		grid-template-columns: 1fr;
+		column-gap: 0;
+	}
+
+	.pricing-plan {
+		width: 100%;
+		justify-self: center !important;
+	}
+
+	.hero-section {
+		padding: 2.4rem 0 4.8rem 0;
+	}
+
+	.hero-main {
+		padding: 0 3.2rem;
+	}
+
+	.button:link,
+	.button:visited,
+	.button-form {
+		padding: 2.4rem 1.6rem;
+	}
+
+	.hero-content--images {
+		width: 100%;
+	}
+
+	.deliverd-meals--images img {
+		height: 3.6rem;
+		width: 3.6rem;
+	}
+
+	.work-app:nth-child(2) {
+		grid-row: 1;
+	}
+
+	.work-app:nth-child(6) {
+		grid-row: 5;
+	}
+
+	.work-app {
+		transform: translateY(2.4rem);
+	}
+
+	.testimonials {
+		grid-template-columns: 1fr;
+	}
+
+	.testimonial-gallery {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.cta-grid {
+		grid-template-columns: 1fr;
+
+		& .cta-content {
+			border-radius: 0 0 1rem 1rem;
+			padding: 3.2rem;
+		}
+	}
+
+	.cta-image {
+		border-radius: 1rem 1rem 0 0;
+		height: 32rem;
+		grid-row: 1;
+	}
+
+	.meal-card:nth-child(2) {
+		grid-row: 2;
+	}
+
+	.meal-card {
+		width: 80%;
+		justify-self: center;
+	}
+}
+
+/* ****************************** */
+/* ? Fixing Safari flexbox gap */
+/* ****************************** */
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+	margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+	margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+	margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+	margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+	margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+	margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+	margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+	margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+	.no-flexbox-gap .main-nav-list li:not(:last-child) {
+		margin-right: 3.2rem;
+	}
+}
+
+@media (max-width: 59em) {
+	.no-flexbox-gap .main-nav-list li:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 4.8rem;
+	}
+}
